@@ -4,8 +4,6 @@ sleep( 3 );
 // no term passed - just exit early with no response
 if (empty($_GET['term'])) exit ;
 $q = strtolower($_GET["term"]);
-// remove slashes if they were magically added
-if (get_magic_quotes_gpc()) $q = stripslashes($q);
 
 $items = array(
 "Great Bittern"=>"Botaurus stellaris",

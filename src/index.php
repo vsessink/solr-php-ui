@@ -892,11 +892,6 @@ if ($cfg['etl_status_warning']) {
 	}
 }
 
-// if magic quotes is enabled then stripslashes will be needed
-if (get_magic_quotes_gpc() == 1) {
-	$query = stripslashes($query);
-}
-
 // If no query, so show last documents
 if (!$query) {
 	if ($cfg['newest_on_empty_query']) {
